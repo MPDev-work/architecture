@@ -1,0 +1,6 @@
+{
+  "name": "Brutalist Architecture Agency",
+  "description": "A highly artistic architecture agency website inspired by brutalist editorial design, Swiss typography, and modern portfolio websites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

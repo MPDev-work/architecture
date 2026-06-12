@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700;800&family=Syne:wght@700;800&family=La+Belle+Aurore&family=JetBrains+Mono:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-syne: "Syne", sans-serif;
+  --font-script: "La Belle Aurore", cursive;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  
+  --color-brand: #FF4D00;
+  --color-dark: #0A0A0A;
+  --color-light: #F7F4F0;
+  --color-concrete-light: #2A2A2A;
+  --color-concrete-dark: #121212;
+  --color-concrete-mid: #1A1A1A;
+}
+
+/* Custom styles for editorial brutalist elements */
+::selection {
+  background-color: var(--color-brand);
+  color: var(--color-dark);
+}
+
+body {
+  background-color: var(--color-dark);
+  color: var(--color-light);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+@layer utilities {
+  .text-stroke {
+    -webkit-text-stroke: 1px rgba(247, 244, 240, 0.3);
+    color: transparent;
+  }
+  .text-stroke-brand {
+    -webkit-text-stroke: 1px var(--color-brand);
+    color: transparent;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-concrete-light);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand);
+}
+
+/* Custom animation classes */
+.blur-in {
+  animation: blurIn 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes blurIn {
+  from {
+    filter: blur(20px);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    filter: blur(0px);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
